@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>桌面组件 · 管理</title><link rel="stylesheet" href="admin.css"></head>
+<body>
+  <main>
+    <header><h1>桌面组件</h1><span id="status" role="status"></span></header>
+    <form id="connect" hidden><label>本地 API 访问密钥<input id="token" type="password" autocomplete="off" required></label><button>连接</button><p>可在项目 data/api.json 中查看；从托盘打开后台无需输入。</p></form>
+    <section id="management" hidden>
+      <nav aria-label="数据类型"><button data-key="todos">待办</button><button data-key="events">日程</button><button data-key="countdowns">倒计时</button><button data-key="settings">接口</button></nav>
+      <div id="records"><div class="tools"><span id="count"></span><div><button id="refresh">刷新</button><button id="add" class="primary">添加</button></div></div><div id="list"></div></div>
+      <section id="settings" hidden><label>接口地址<input id="address" readonly></label><label>访问密钥<input id="api-key" type="password" readonly></label><button id="reveal">显示密钥</button><p>用于本机数据读写，与 LLM 服务商 API Key 分开。接口和数据格式说明见项目 API.md。</p><p>目前没有接入 LLM，也不会发送这些数据。</p></section>
+    </section>
+  </main><script type="module" src="admin.js"></script>
+</body></html>

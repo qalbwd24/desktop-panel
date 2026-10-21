@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://assets.desk.local https://cache.desk.local data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>桌面组件 · v0.1</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="desktop" aria-label="桌面组件"></main>
+  <div id="layout-toolbar" hidden><span class="toolbar-label">编辑布局</span><span>拖动标题 · 拖动右下角调整尺寸</span><button id="reset-layout" type="button">重置位置</button><button id="finish-layout" type="button">保存并退出</button></div>
+  <div id="preview-toolbar" hidden><span>浏览器预览 · 数据仅保存在此浏览器</span><button id="edit-layout" type="button">编辑布局</button></div>
+  <div id="toast" role="status" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
